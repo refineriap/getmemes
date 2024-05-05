@@ -1,4 +1,4 @@
-import image from '../src/assets/react.svg'
+import image from '../public/sk-uVPV_nV17Tw-unsplash.jpg'
 import './App.css'
 
 function App() {
