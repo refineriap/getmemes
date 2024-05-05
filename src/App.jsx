@@ -1,10 +1,12 @@
-import image from '../public/sk-uVPV_nV17Tw-unsplash.jpg'
+// import image from '/sk-uVPV_nV17Tw-unsplash.jpg'
 import './App.css'
+import Navbar from './components/Navbar'
 
 function App() {
-  return (
-    <div>
-      <img src={image} className="image"/>
+  return ( 
+    <div> 
+      <Navbar />
+      {/* <img src={image} className="image"/> */}
     </div>
   )
 }
