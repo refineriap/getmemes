@@ -1,14 +1,22 @@
 
 export default function Main() {
+    function handleClick() {
+        console.log("I was clicked!!!")
+    }
+
     return (
-        <div className="">
-            <main className="">
-                <form action="" className="">
-                    <input type="text" className="" />
-                    <input type="text" className="" />
-                    <button className=""></button>
-                </form>
-            </main>
-        </div>
+        <main>
+            <form className="form">
+                <div>
+                    <label htmlFor="top-text">Click for top search</label>            
+                    <input id="top-text" type="text" className="form--input" placeholder="top text" />
+                </div> 
+                <div>
+                    <label htmlFor="bottom--text">Click for bottom search</label>   
+                    <input id="bottom--text" type="text" className="form--input" placeholder="bottom text" />
+                </div>           
+                <button className="form--button" onClick={handleClick}>Get a new meme image</button>
+            </form>
+        </main>
     )
 }

@@ -1,4 +1,4 @@
-// import image from '/sk-uVPV_nV17Tw-unsplash.jpg'
+
 import './App.css'
 import Navbar from './components/Navbar'
 import Main from './components/Main'
