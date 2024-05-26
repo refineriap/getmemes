@@ -3,7 +3,7 @@ import { useState } from "react"
 
 
 export default function Main() {
-    const [memeImage, setMemeImage] = useState("")
+    const [memeImage, setMemeImage] = useState("https://i.imgflip.com/1g8my4.jpg")
 
     function getMeme() {
         const getImage = memesData.data.memes
