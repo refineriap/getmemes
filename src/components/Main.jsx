@@ -3,12 +3,25 @@ import { useState } from "react"
 
 
 export default function Main() {
-    const [memeImage, setMemeImage] = useState("https://i.imgflip.com/1g8my4.jpg")
+
+    const [meme, setMeme] = useState({
+        firstName: "",
+        lastName: "",
+        randomImage: "https://i.imgflip.com/1g8my4.jpg",
+    })
+
+
+    const [allMemeImages, setAllMemeImages] = useState(memesData)
+    
 
     function getMeme() {
-        const getImage = memesData.data.memes
-        const randNum = Math.floor(Math.random() * getImage.length)
-        setMemeImage(getImage[randNum].url)
+        const memesArray = allMemeImages.data.memes
+        const randNum = Math.floor(Math.random() * memesArray.length)
+        const url = memesArray[randNum].url
+        setMeme(prevState => ({
+            ...prevState,
+            randomImage: url,
+        }))
     }
 
 
@@ -24,8 +37,8 @@ export default function Main() {
                     <input id="bottom--text" type="text" className="form--input" placeholder="bottom text" />
                 </div>           
                 <button onClick={getMeme} className="form--button" >Get a new meme image</button>
-                <img src={memeImage} alt="" className="image--practice" />
             </div>
+            <img src={meme.randomImage} alt="" className="image--practice" />
         </main>
     )
 }
