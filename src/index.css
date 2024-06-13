@@ -28,7 +28,7 @@ label {
     font-family: "Teachers", sans-serif;
     border-radius: 5px;
     background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
-    color: white;
+    color: rgb(254, 250, 250);
     border: none;
     cursor: pointer;
     width: 100%;
